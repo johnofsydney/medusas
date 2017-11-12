@@ -1,0 +1,55 @@
+body {
+  color: white;
+
+  background: url("../images/background.jpg");
+  background-size: 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+}
+
+.wrapper {
+  width: 80%;
+  margin: auto;
+}
+
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: auto;
+  background: black;
+  opacity: 0.9;
+  z-index: 10;
+}
+
+nav ul {
+  float: right;
+}
+
+nav li {
+    display: inline-block;
+    /*float: right;*/
+    padding: 10px;
+}
+
+nav h1 {
+  /*position: relative;*/
+  display: inline-block;
+}
+
+
+.main {
+  margin-top: 80px;
+}
+
+.content {
+  background: black;
+  opacity: 0.9;
+}
+
+.hidden {
+  display: none;
+  /*color: yellow;*/
+}
