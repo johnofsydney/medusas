@@ -1,6 +1,7 @@
 console.log("connected");
 let state = {
-  styleCounter: 0
+  styleCounter: 0,
+  slideIndex: 0
 };
 
 
@@ -23,8 +24,11 @@ const buzzFizz = function ( $fizzDiv ) {
   }).appendTo($fizzDiv);
 
 
-  $bubble.animate({top: divTop}, 10000, function () {
-    $bubble.remove(); // Clean up after ourselves to conserve memory.
+  $bubble.animate({top: 100 }, 12000, function () {
+    $bubble.animate( {top: divTop}, 32000, function () {
+      $bubble.remove(); // Clean up after ourselves to conserve memory.
+    })
+
   });
 }
 
@@ -80,19 +84,47 @@ const cycleCSS = function () {
 }
 
 
+
+
+function carousel () {
+  console.log("carousel");
+  $slideArray = $('.mySlides')
+
+  $.each($slideArray, function(index,value) {
+    // console.log(index, value);
+    $(value).css("display", "none")
+  })
+
+  if (state.slideIndex >= $slideArray.length) { state.slideIndex = 0 }
+
+  $imgToDisplay = $( $slideArray[ state.slideIndex ] );
+  console.log(state.slideIndex);
+  $imgToDisplay.css("display", "block")
+
+  state.slideIndex ++
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+
+}
+
+
+
+
+
+
 $(document).ready( function() {
 
   console.log("ready");
 
   $('.cycler').on('click', function () {
     cycleCSS()
-
   });
 
 
-  const fizzTimeDone = window.setInterval(fizzBuzz, 200);
+  const fizzTimeDone = window.setInterval(fizzBuzz, 150);
   // const shuffleTimeDone = window.setInterval(shuffleDivs, 5000);
 
+  // var slideIndex = 0;
+  // carousel(slideIndex);
 
 
 
