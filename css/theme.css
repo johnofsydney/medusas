@@ -69,6 +69,21 @@ body {
 
 
 @media only screen and (max-width: 700px) {
+
+  body {
+    line-height: 1;
+    font-size: 105%;
+  }
+
+  #menu-desktop {
+    display: none;
+  }
+
+  #menu-phone {
+    display: block;
+  }
+
+
   #banner p {
     padding: 0.5em;
   }
@@ -81,4 +96,11 @@ body {
   img {
     width: 50%;
   }
+
+  .container {
+    width: 100%;
+    margin-top: 2em;
+  }
+
+
 }
