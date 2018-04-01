@@ -59,7 +59,20 @@
   padding: 0;
 }
 
+#menu-desktop {
+  display: flex;
+}
 
+#menu-phone {
+  display: none;
+}
+
+#events li {
+  font-family: 'Arial', sans-serif;
+  font-size: 80%;
+  padding-left: 1em;
+  padding-right: 1em;
+}
 
 body {
   font-family: 'Raleway', sans-serif;
@@ -80,7 +93,7 @@ body {
   }
 
   #menu-phone {
-    display: block;
+    display: flex;
   }
 
 
