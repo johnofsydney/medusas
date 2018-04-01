@@ -1,90 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/jquery-3.2.1.js"></script>
-  <script src="js/main.js"></script>
-  <title>Medusas Wake</title>
+  <script src="js/jquery.js" charset="utf-8"></script>
+  <script src="js/underscore.js" charset="utf-8"></script>
+  <script src="js/main.js" charset="utf-8"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+  <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/master.css">
+
+  <title>Medusa's Wake</title>
+
 </head>
-
-<body>
-
-
+<body class="bg-dark-trans">
+  <div id="fb-root"></div>
 
 
-  <nav>
-    <h1>Medusa's Wake</h1>
-    <ul>
-      <li id="home">Home</li>
-      <li id="music">Music</li>
-      <li id="events">Events</li>
-      <li id="presskit">Press Kit</li>
-    </ul>
+  <nav class="nav-top fixed bg-dark-trans brd-accent-3">
+    <h2 class="left col-1-4"><a href="https://github.io/johnofsydney/medusas">Medusa's Wake</a></h2>
+    <div class="right">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Gigs</a></li>
+        <li><a href="#">Music</a></li>
+        <li><a href="#">Photos</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
   </nav>
 
 
-  <div class="wrapper">
 
 
+  <div class="container left fizz">
 
+    <div class="row-1-10"></div>
 
-
-    <div class="main">
-      <div class="photo">
-        <img src="" alt="">
+    <div id="home"  class="section">
+      <div class="left">
+        <p>Medusa's Wake formed in Sydney in autumn 2015, we play music that is modern, but has traditional roots, music that is undeniably Australian and yet undeniably Irish at the same time.</p>
       </div>
-      <div class="content">
+      <div class="space-between">
 
-        <div class="home">
-          <p>Medus's Wake formed in 2015 to play "songs about drinking, fighting and death"</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="band-member center col-1-3"> <img src="http://placekitten.com/g/400/400" alt=""> <h3>Ed Lawlor</h3> <p>Vocals, Mandolin, Bazouki</p></div>
+        <div class="band-member center col-1-3"> <img src="http://placekitten.com/g/400/400" alt=""> <h3>Frank Sallie</h3> <p>Vocals, Acoustic Guitar, Harmonica</p></div>
+        <div class="band-member center col-1-3"> <img src="http://placekitten.com/g/400/400" alt=""> <h3>Ben Pattison</h3> <p>Accordion</p></div>
+      </div>
+      <div class="space-between">
+        <div class="band-member center col-1-3"> <img src="http://placekitten.com/g/400/400" alt=""> <h3>John Coote</h3> <p>Electric Guitar, Banjo</p></div>
+        <div class="band-member center col-1-3"> <img src="http://placekitten.com/g/400/400" alt=""> <h3>Ronaldo</h3> <p>Drums</p></div>
+        <div class="band-member center col-1-3"> <img src="http://placekitten.com/g/400/400" alt=""> <h3>Zane McRae</h3> <p>Bass Guitar</p></div>
+      </div>
+    </div>  <!-- end home -->
 
+
+    <div id="events"  class="section">
+
+      <div class="space-between">
+        <div class="col-1-3 center">
+          <h3>Upcoming Gigs</h3>
+          <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmedusaswake%2F&tabs=events&width=340&height=550&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId"  width="340" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
         </div>
-
-        <div class="music hidden">
-          <p>Medusa's Wake on <a href="#">iTunes</a>, <a href="#">Spotify</a> and <a href="http://medusaswake.bandcamp.com">Bandcamp</a></p>
-
-          <iframe style="border: 0; width: 350px; height: 687px;" src="https://bandcamp.com/EmbeddedPlayer/album=2902427520/size=large/bgcol=333333/linkcol=0f91ff/transparent=true/" seamless><a href="http://medusaswake.bandcamp.com/album/medusas-wake-ep">Medusas Wake - EP by Medusa&#39;s Wake</a></iframe>
-
+        <div class="col-1-3 center">
+          <h3>News and chit chat</h3>
+          <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmedusaswake%2F&tabs=timeline&width=340&height=550&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId" width="340" height="550" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
         </div>
-
-
-
-        <div class="events hidden">
-          <h2>Upcoming Gigs</h2>
-
-
-          <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmedusaswake%2F&tabs=events&width=340&height=184&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId" width="340" height="384" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-
-
-
-        </div>
-
-        <div class="presskit hidden">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-
 
 
       </div>
+
+
     </div>
 
 
 
-  </div>
-  <!-- end wrapper -->
+    <div id="music"  class="section">
+
+      <div class="space-between">
+
+        <div class="center col-1-3">
+          <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2642146711/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/" seamless><a href="http://medusaswake.bandcamp.com/album/medusas-wake-wild-rover">Medusa&#39;s Wake - Wild Rover by Medusa&#39;s Wake</a></iframe>
+          <h3>Rascals and Rogues</h3> <p>Our debut album. Recorded 2017 and 2018.</p>
+        </div>
+        <div class="center col-1-3">
+          <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2642146711/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/" seamless><a href="http://medusaswake.bandcamp.com/album/medusas-wake-wild-rover">Medusa&#39;s Wake - Wild Rover by Medusa&#39;s Wake</a></iframe>
+          <h3>The Wild Rover</h3> <p>Just for fun, recorded at one of the sessions for Rascals and Rogues</p>
+        </div>
+        <div class="center col-1-3">
+          <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2902427520/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/" seamless><a href="http://medusaswake.bandcamp.com/album/medusas-wake-ep">Medusas Wake - EP by Medusa&#39;s Wake</a></iframe>
+          <h3>EP</h3> <p>Early Recordings</p>
+        </div>
+      </div>
+      <div id="social-music" class="space-around">
+        <div id="spotify" class="center"> <i class="fab fa-spotify fa-3x"></i> </div>
+        <div id="itunes" class="center"> <i class="fab fa-itunes fa-3x"></i> </div>
+        <div id="bandcamp" class="center"> <i class="fab fa-bandcamp fa-3x"></i> </div>
+      </div>
+
+    </div>  <!-- end music -->
+
+
+  </div>  <!-- end container -->
 
 </body>
-
 </html>
