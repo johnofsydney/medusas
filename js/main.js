@@ -5,6 +5,23 @@ let state = {
 };
 
 
+(function($) {
+    $.fn.goTo = function() {
+        $('html, body').animate({
+            scrollTop: ($(this).offset().top - 70 ) + 'px'
+        }, 'slow');
+        return this; // for chaining...
+    }
+})(jQuery);
+// from https://stackoverflow.com/questions/4801655/how-to-go-to-a-specific-element-on-page
+
+
+
+
+
+
+
+
 const buzzFizz = function ( $fizzDiv ) {
   // $fizzDiv.css("background-color", "rgb(96, 99, 85)")
   let divLeft = $fizzDiv.position().left
@@ -24,7 +41,7 @@ const buzzFizz = function ( $fizzDiv ) {
   }).appendTo($fizzDiv);
 
 
-  $bubble.animate({top: 100 }, 12000, function () {
+  $bubble.animate({top: 100 }, 22000, function () {
     $bubble.animate( {top: divTop}, 32000, function () {
       $bubble.remove(); // Clean up after ourselves to conserve memory.
     })
@@ -43,68 +60,41 @@ const fizzBuzz = function () {
 }
 
 
+//
+// const shuffleDivs = function () {
+//
+// }
+//
+//
+// const cycleCSS = function () {
+//
+//   $('<link/>', {
+//      rel: 'stylesheet',
+//      type: 'text/css',
+//      href: 'css/normalize.css'
+//   }).appendTo('head');
+//   $('<link/>', {
+//      rel: 'stylesheet',
+//      type: 'text/css',
+//      href: 'css/master.css'
+//   }).appendTo('head');
+//
+//
+//   let styles = ["css/master.css", "css/theme.css", "css/red-cat.css"]
+//   state.styleCounter = state.styleCounter + 1;
+//   if (state.styleCounter >= styles.length) {
+//     state.styleCounter = 0
+//   }
+//
+//     var link = document.createElement("link");
+//     link.rel = "stylesheet";
+//     link.type = "text/css";
+//     link.href = styles[state.styleCounter];
+//
+//     $('head').append(link)
+//
+// }
 
-const shuffleDivs = function () {
-
-}
-
-
-const cycleCSS = function () {
-  // console.log("cycling now");
-
-  $('<link/>', {
-     rel: 'stylesheet',
-     type: 'text/css',
-     href: 'css/normalize.css'
-  }).appendTo('head');
-  $('<link/>', {
-     rel: 'stylesheet',
-     type: 'text/css',
-     href: 'css/master.css'
-  }).appendTo('head');
-
-
-
-
-  let styles = ["css/master.css", "css/theme.css", "css/red-cat.css"]
-  state.styleCounter = state.styleCounter + 1;
-  if (state.styleCounter >= styles.length) {
-    state.styleCounter = 0
-  }
-
-    var link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.type = "text/css";
-    link.href = styles[state.styleCounter];
-
-    $('head').append(link)
-    // console.log(state.styleCounter);
-    // console.log(link.href);
-
-}
-
-
-
-
-function carousel () {
-  console.log("carousel");
-  $slideArray = $('.mySlides')
-
-  $.each($slideArray, function(index,value) {
-    // console.log(index, value);
-    $(value).css("display", "none")
-  })
-
-  if (state.slideIndex >= $slideArray.length) { state.slideIndex = 0 }
-
-  $imgToDisplay = $( $slideArray[ state.slideIndex ] );
-  console.log(state.slideIndex);
-  $imgToDisplay.css("display", "block")
-
-  state.slideIndex ++
-  setTimeout(carousel, 2000); // Change image every 2 seconds
-
-}
 
 
 
@@ -115,9 +105,22 @@ $(document).ready( function() {
 
   console.log("ready");
 
-  $('.cycler').on('click', function () {
-    cycleCSS()
+  // $('.cycler').on('click', function () {
+  //   cycleCSS()
+  // });
+
+
+
+  $('#images').slick({
+    // dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
+    autoplay: true,
+    autoplaySpeed: 5000,
   });
+
 
 
   const fizzTimeDone = window.setInterval(fizzBuzz, 150);
@@ -128,14 +131,44 @@ $(document).ready( function() {
 
 
 
-  $('#toggleShy').on('click', function () {
-    $('.shy').toggleClass('is-active')
+  // $('#toggleShy').on('click', function () {
+  //   $('.shy').toggleClass('is-active')
+  // })
+  //
+  // $('#toggleSpace').on('click', function () {
+  //   $('#space-demo').toggleClass('space-between')
+  //   $('#space-demo').toggleClass('space-around')
+  // })
+
+
+
+  $('.btnHome').on('click', function () {
+    $('#home').goTo();
+  })
+  $('.btnGigs').on('click', function () {
+    $('#events').goTo();
+  })
+  $('.btnMusic').on('click', function () {
+    $('#music').goTo();
+  })
+  $('.btnContact').on('click', function () {
+    $('#contact').goTo();
   })
 
-  $('#toggleSpace').on('click', function () {
-    $('#space-demo').toggleClass('space-between')
-    $('#space-demo').toggleClass('space-around')
-  })
 
 
 })
+
+
+
+
+
+(function($) {
+    $.fn.goTo = function() {
+        $('html, body').animate({
+            scrollTop: $(this).offset().top + 'px'
+        }, 'slow');
+        return this; // for chaining...
+    }
+})(jQuery);
+// from https://stackoverflow.com/questions/4801655/how-to-go-to-a-specific-element-on-page
